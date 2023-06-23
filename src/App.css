@@ -42,3 +42,14 @@
   grid-template-columns: 15% 85%;
 }
 
+#sidebar ui, li {
+  list-style: none;
+}
+
+#sidebar li {
+  margin-bottom: 40px;
+}
+
+#sidebar li:first-of-type {
+  margin-top: 50px;
+}

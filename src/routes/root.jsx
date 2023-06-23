@@ -1,11 +1,14 @@
 import { Outlet, Link } from "react-router-dom"
 
-export default function Root() {
+export const Root = () => {
   return (
     <>
       <div id="sidebar">
         <nav>
           <ul>
+            <li>
+              <Link to={``}>Home</Link>
+            </li>
             <li>
               <Link to={`rules`}>Set Rules</Link>
             </li>

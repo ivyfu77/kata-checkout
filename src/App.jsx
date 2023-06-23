@@ -1,26 +1,37 @@
-import React from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { useState } from 'react'
+import { BrowserRouter } from "react-router-dom"
+import { Routes, Route } from 'react-router-dom'
+import { Root } from './routes/root'
+import { Welcome } from './components/Welcome'
+import { Rules } from './components/rules/Rules'
+import { INITIAL_RULES } from './data/initialRules'
 
-const App = () => {
+
+export const App = () => {
+  const [rules, setRules] = useState(INITIAL_RULES)
+  const handleAddRule = (rule) => {
+    const newRules = structuredClone(rules)
+    newRules[rule.item] = { price: rule.price, promo: rule.promo }
+    setRules(newRules)
+  }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React Ivy!
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Root />}>
+            <Route
+              path="/"
+              element={<Welcome />}
+            />
+            <Route
+              path="rules"
+              element={<Rules source={rules} onAdd={(rule) => handleAddRule(rule)} />}
+            />
+            <Route path="checkout" element={<div>Check out</div>} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+      {Object.keys(rules).map(key => (<div key={key}>{key} - {rules[key].price}</div>))}
+    </>
   )
 }
-
-export default App
