@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Welcome } from './components/Welcome'
+import { Welcome } from '../components/Welcome'
 
 test('renders CodeKata link', () => {
   render(<Welcome />);

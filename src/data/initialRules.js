@@ -14,7 +14,7 @@ export const INITIAL_RULES = {
     },
   },
   'C': {
-    price: 30,
+    price: 20,
   },
   'D': {
     price: 15,
