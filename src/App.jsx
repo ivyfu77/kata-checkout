@@ -6,7 +6,6 @@ import { Rules } from './components/view/Rules'
 import { Checkout } from './components/view/Checkout'
 import { INITIAL_RULES } from './data/initialRules'
 
-
 export const App = () => {
   const [rules, setRules] = useState(INITIAL_RULES)
   const handleAddRule = (rule) => {
@@ -19,13 +18,12 @@ export const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Root />}>
-            <Route
-              path="/"
-              element={<Welcome />}
-            />
+            <Route path="/" element={<Welcome />} />
             <Route
               path="rules"
-              element={<Rules source={rules} onAdd={(rule) => handleAddRule(rule)} />}
+              element={
+                <Rules source={rules} onAdd={(rule) => handleAddRule(rule)} />
+              }
             />
             <Route path="checkout" element={<Checkout rules={rules} />} />
           </Route>

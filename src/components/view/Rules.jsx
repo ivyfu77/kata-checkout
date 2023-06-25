@@ -1,4 +1,5 @@
 import React from 'react'
+import { Section, Header, Button } from '../common'
 
 export const Rules = ({ source, onAdd }) => {
   const testRule = {
@@ -7,21 +8,26 @@ export const Rules = ({ source, onAdd }) => {
     promo: {
       quantity: 1,
       specialPrice: 60,
-    }
+    },
   }
   return (
     <>
-      <div>Rules set up here</div>
-      <button onClick={() => onAdd(testRule)}>Add New Rule</button>
-      {Object.keys(source).map(key => (
-        <p key={key}>
-          {key} - ${source[key].price}
-          {source[key].promo
-            ? ` - ${source[key].promo.quantity} for ${source[key].promo.specialPrice}`
-            : null
-          }
-        </p>
-      ))}
+      <Section>
+        <Header>Set Rules</Header>
+      </Section>
+      <Section>
+        <Button onClick={() => onAdd(testRule)} variant="do">
+          Add Rule
+        </Button>
+        {Object.keys(source).map((key) => (
+          <p key={key}>
+            {key} - ${source[key].price}
+            {source[key].promo
+              ? ` - ${source[key].promo.quantity} for ${source[key].promo.specialPrice}`
+              : null}
+          </p>
+        ))}
+      </Section>
     </>
   )
 }

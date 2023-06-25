@@ -6,9 +6,7 @@ export const Welcome = () => {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Kata09: Back to Checkout
-        </p>
+        <p>Kata09: Back to Checkout</p>
         <a
           className="App-link"
           href="http://codekata.com/kata/kata09-back-to-the-checkout/"
