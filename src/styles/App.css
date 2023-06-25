@@ -97,6 +97,9 @@ h4 {
   background-color: #bb2a1a;
   color: #fff;
 }
+.kata-btn--no:hover {
+  background-color: #c34739;
+}
 .kata-btn--go {
   background-color: #fcc015;
   color: #fff;
@@ -159,4 +162,33 @@ nav .kata-sidebar-nav-item:first-of-type {
 }
 .kata-rules-set-unit span {
   font-size: small;
+}
+
+.kata-quick-keys-container {
+  display: flex;
+  margin-top: 15px;
+}
+
+.kata-quick-key {
+  display: flex;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 5px;
+  background-color: #fcc015;
+  font-size: 17px;
+  margin-right: 20px;
+}
+.kata-quick-key:hover {
+  cursor: pointer;
+  background-color: #ffd700;
+}
+.kata-checkout-list-header {
+  margin-bottom: 24px;
+}
+.kata-checkout-list-bottom {
+  display: flex;
+}
+.kata-checkout-list-bottom p {
+  flex-basis: 100%;
 }

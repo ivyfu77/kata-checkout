@@ -31,7 +31,7 @@ export const Rules = ({ source, onAdd }) => {
         promo: {
           quantity,
           specialPrice,
-        }
+        },
       })
     } else {
       onAdd({
@@ -48,21 +48,20 @@ export const Rules = ({ source, onAdd }) => {
         <Header>Set Rules</Header>
       </Section>
       <Section className="kata-action-bar">
-        <form className='kata-rules-set-container' onSubmit={(e) => handleSubmit(e)}>
-          <div className='kata-rules-set-unit'>
+        <form className="kata-rules-set-container" onSubmit={handleSubmit}>
+          <div className="kata-rules-set-unit">
             <label>Item</label>
-            <input type='text' name='item' required />
+            <input type="text" name="item" required />
           </div>
-          <div className='kata-rules-set-unit'>
+          <div className="kata-rules-set-unit">
             <label>Price</label>
-            <input type='number' min={0} name='price' required />
+            <input type="number" min={0} name="price" required />
           </div>
-          <div className='kata-rules-set-unit'>
+          <div className="kata-rules-set-unit">
             <label>Promo (Optional)</label>
             <div>
-              <input type='number' min={1} name='quantity' />{' '}
-              <span>For</span>{' '}
-              <input type='number' min={0} name='specialPrice' />
+              <input type="number" min={1} name="quantity" /> <span>For</span>{' '}
+              <input type="number" min={0} name="specialPrice" />
             </div>
           </div>
           <Button type="submit" variant="do">
