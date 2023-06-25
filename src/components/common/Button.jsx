@@ -11,9 +11,11 @@ export const Button = ({
   className = '',
   disabled = false,
   children,
+  ...attributes
 }) => {
   return (
     <button
+      {...attributes}
       className={classNames('kata-btn', `kata-btn--${variant}`, className)}
       disabled={disabled}
     >

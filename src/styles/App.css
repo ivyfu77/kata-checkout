@@ -38,8 +38,7 @@
 }
 
 #root {
-  display: grid;
-  grid-template-columns: 15% 85%;
+  display: flex;
 }
 
 /* common styles */
@@ -72,7 +71,6 @@ h4 {
   border-radius: 4px;
   border: 1px solid transparent;
   box-sizing: border-box;
-  cursor: pointer;
   display: inline-block;
   font-family: lato, 'Helvetica Neue', helvetica, roboto, arial, sans-serif;
   font-size: 15px;
@@ -82,9 +80,18 @@ h4 {
   position: relative;
   text-align: center;
 }
+.kata-btn:hover {
+  cursor: pointer;
+}
 .kata-btn--do {
   background-color: #3f32f5;
   color: #fff;
+}
+.kata-btn--do:hover {
+  background-color: #554af4;
+}
+.kata-btn--do:focus {
+  box-shadow: 0 0 0 2px rgba(255,255,255,.8),0 0 3px 3px rgba(63,50,245,.35),0 0 0 3px rgba(63,50,245,.6);
 }
 .kata-btn--no {
   background-color: #bb2a1a;
@@ -94,12 +101,16 @@ h4 {
   background-color: #fcc015;
   color: #fff;
 }
+.kata-action-bar {
+  display: flex;
+}
 
 /* -----sidebar styles ----- */
 .kata-sidebar-container {
   background-color: #e7e5df;
   padding: 15px;
   min-height: 100vh;
+  min-width: 150px;
 }
 
 .kata-sidebar-container nav {
@@ -125,3 +136,27 @@ nav .kata-sidebar-nav-item:first-of-type {
 }
 
 /* -----detail styles ----- */
+#detail {
+  width: 100%;
+}
+.kata-rules-set-container {
+  display: flex;
+  align-items: flex-end;
+}
+.kata-rules-set-unit {
+  display: flex;
+  flex-direction: column;
+  margin-right: 40px;
+  font-weight: 500;
+}
+
+.kata-rules-set-unit label {
+  margin-bottom: 12px;
+}
+
+.kata-rules-set-unit input {
+  width: 4em;
+}
+.kata-rules-set-unit span {
+  font-size: small;
+}
