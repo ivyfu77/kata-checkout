@@ -1,6 +1,6 @@
 /**
  *
- * @param {Array} lineItems
+ * @param {Array} lineItems // eg: ['A', 'B', 'A', 'A']
  * @param {Object} rules
  *
  * @return calculate total price of current lineItems

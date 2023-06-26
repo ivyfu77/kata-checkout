@@ -17,6 +17,7 @@ export const Button = ({
     <button
       {...attributes}
       className={classNames('kata-btn', `kata-btn--${variant}`, className)}
+      disabled={disabled}
     >
       {children}
     </button>

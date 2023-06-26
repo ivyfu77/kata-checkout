@@ -10,7 +10,10 @@ export const App = () => {
   const [rules, setRules] = useState(INITIAL_RULES)
   const handleAddRule = (rule) => {
     const newRules = structuredClone(rules)
-    newRules[rule.item] = { price: rule.price, promo: rule.promo }
+    newRules[rule.item] = { price: rule.price }
+    if (rule.promo) {
+      newRules[rule.item].promo = rule.promo
+    }
     setRules(newRules)
   }
   return (

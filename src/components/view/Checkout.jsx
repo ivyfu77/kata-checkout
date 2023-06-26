@@ -6,7 +6,7 @@ import { total } from '../../utils/calculation'
 export const Checkout = ({ rules }) => {
   const [lineItems, updateLineItems] = useState([])
   return (
-    <>
+    <div className="kata-detail-container">
       <Section>
         <Header>Checkout</Header>
       </Section>
@@ -54,6 +54,6 @@ export const Checkout = ({ rules }) => {
           </Button>
         </div>
       </Section>
-    </>
+    </div>
   )
 }

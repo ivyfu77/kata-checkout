@@ -83,6 +83,11 @@ h4 {
 .kata-btn:hover {
   cursor: pointer;
 }
+.kata-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.35;
+  filter: grayscale(100%);
+}
 .kata-btn--do {
   background-color: #3f32f5;
   color: #fff;
@@ -91,7 +96,8 @@ h4 {
   background-color: #554af4;
 }
 .kata-btn--do:focus {
-  box-shadow: 0 0 0 2px rgba(255,255,255,.8),0 0 3px 3px rgba(63,50,245,.35),0 0 0 3px rgba(63,50,245,.6);
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.8),
+    0 0 3px 3px rgba(63, 50, 245, 0.35), 0 0 0 3px rgba(63, 50, 245, 0.6);
 }
 .kata-btn--no {
   background-color: #bb2a1a;
@@ -142,7 +148,10 @@ nav .kata-sidebar-nav-item:first-of-type {
 #detail {
   width: 100%;
 }
-.kata-rules-set-container {
+.kata-detail-container {
+  max-width: 1100px;
+}
+.kata-rules-set-form {
   display: flex;
   align-items: flex-end;
 }

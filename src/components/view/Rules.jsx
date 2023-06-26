@@ -21,9 +21,9 @@ export const Rules = ({ source, onAdd }) => {
   const handleSubmit = (event) => {
     event.preventDefault()
     const item = event.target.item.value
-    const price = event.target.price.value
-    const quantity = event.target.quantity.value
-    const specialPrice = event.target.specialPrice.value
+    const price = Number(event.target.price.value)
+    const quantity = Number(event.target.quantity.value)
+    const specialPrice = Number(event.target.specialPrice.value)
     if (quantity && specialPrice) {
       onAdd({
         item,
@@ -43,12 +43,12 @@ export const Rules = ({ source, onAdd }) => {
   }
 
   return (
-    <>
+    <div className="kata-detail-container">
       <Section>
         <Header>Set Rules</Header>
       </Section>
       <Section className="kata-action-bar">
-        <form className="kata-rules-set-container" onSubmit={handleSubmit}>
+        <form className="kata-rules-set-form" onSubmit={handleSubmit}>
           <div className="kata-rules-set-unit">
             <label>Item</label>
             <input type="text" name="item" required />
@@ -60,7 +60,8 @@ export const Rules = ({ source, onAdd }) => {
           <div className="kata-rules-set-unit">
             <label>Promo (Optional)</label>
             <div>
-              <input type="number" min={1} name="quantity" /> <span>For</span>{' '}
+              <input type="number" min={1} name="quantity" step={1} />{' '}
+              <span>For</span>{' '}
               <input type="number" min={0} name="specialPrice" />
             </div>
           </div>
@@ -80,6 +81,6 @@ export const Rules = ({ source, onAdd }) => {
           </p>
         ))}
       </Section>
-    </>
+    </div>
   )
 }
