@@ -89,7 +89,8 @@ Posted by Dave Thomas (@PragDave) Dec 21st, 2013
 - Implement `total` calculation while adding product to cart (list)
 - Available to clear the carts
 
-![Kapture 2023-07-24 at 12 45 46](https://github.com/ivyfu77/kata-checkout/assets/23366740/4267c4ca-4edf-4609-99ef-ed0558428ed8)
+![Kapture 2023-07-24 at 12 45 46](https://github.com/ivyfu77/kata-checkout/assets/23366740/0736e1d7-0266-4638-881c-c51cc1f045ce)
+
 
 
 ## Available Scripts
